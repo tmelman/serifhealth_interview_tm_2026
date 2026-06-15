@@ -20,8 +20,6 @@ def standardize_csvs():
     hpt['ein']=hpt['source_file_name'].apply(lambda x: int(x.split('_')[0].replace('-','')[:9]))
     # cut unnecessary columns out
     hpt = hpt.iloc[:,6:]
-    # rate
-    hpt'
 
     hpt.to_csv("../data/hpt_processed.csv")
     tic.to_csv("../data/tic_processed.csv")
